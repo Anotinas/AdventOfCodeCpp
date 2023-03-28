@@ -5,9 +5,6 @@ project(
   AdventOfCodeExe
   LANGUAGES CXX)
 
-# Setting which days will be built
-set(DAY0_ENABLED TRUE)
-
 # Sources and includes for the main executable
 set(SOURCES
     src/advent_general.cpp
@@ -20,14 +17,27 @@ target_include_directories(
     PRIVATE
     include)
 
+message("day0_enabled=${DAY0_ENABLED}")
 # Adding libraries for the various days
 if(DAY0_ENABLED)
+target_include_directories(
+    ${PROJECT_NAME}
+    PRIVATE
+    days/day0)
+target_sources(
+    ${PROJECT_NAME}
+    PRIVATE
+    days/day0/day0.cpp)
+endif()
+
+message("day3_enabled=${DAY3_ENABLED}")
+if(DAY3_ENABLED)
     add_library(
-        day0lib
-        days/day0/day0.h
-        days/day0/day0.cpp)
+        day3lib
+        days/day3/day3.h
+        days/day3/day3.cpp)
     target_link_libraries(
         ${PROJECT_NAME}
         PRIVATE
-        day0lib)
+        day3lib)
 endif()

@@ -1,5 +1,5 @@
 mkdir build
 cd build
-cmake ..
+cmake .. -DDAY0_ENABLED=true
 make
 ./AdventOfCodeExe
