@@ -7,12 +7,9 @@
 #include <optional>
 
 namespace adventGeneral {
-    const std::string getFileContents(const std::string& filePath);
-    const std::string getFilePath(int day, int part);
-    const std::string runDay(int day, int part);
-    const void runAllDays(int part);
-    const std::string runPart(const Day& day, int part, const std::string& input);
-
+    const void runDay(int day, int part, bool isTestingEnabled);
+    const void runAllDays(int part, bool isTestingEnabled);
+    const std::string runPart(const Day& day, int part, bool isTestingEnabled);
 }
 
 #endif //ADVENT_GENERAL

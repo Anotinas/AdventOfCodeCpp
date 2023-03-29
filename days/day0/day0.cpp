@@ -1,8 +1,10 @@
 #include "day0.h"
+#include "inputHandler.h"
+
 #include <iostream>
 #include <sstream>
 
-const std::string DayZero::part1(const std::string& input) const{
+const std::string DayZero::part1(const std::string& input) const {
 
     std::stringstream ss(input);
     std::string to;
@@ -15,7 +17,7 @@ const std::string DayZero::part1(const std::string& input) const{
     return std::to_string(total);
 }
 
-const std::string DayZero::part2(const std::string& input) const{
+const std::string DayZero::part2(const std::string& input) const {
     std::stringstream ss(input);
     std::string to;
     int total = 0;
@@ -26,3 +28,7 @@ const std::string DayZero::part2(const std::string& input) const{
     }
     return std::to_string(total);
 }
+
+  const std::string DayZero::getInput(int part) const {
+    return getFileContents(getFilePath(0, part));
+  }

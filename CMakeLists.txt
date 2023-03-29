@@ -8,6 +8,7 @@ project(
 # Sources and includes for the main executable
 set(SOURCES
     src/advent_general.cpp
+    src/inputHandler.cpp
     src/main.cpp)
 add_executable(
     ${PROJECT_NAME}
