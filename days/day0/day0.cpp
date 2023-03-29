@@ -2,20 +2,27 @@
 #include <iostream>
 #include <sstream>
 
-const std::string day0::part1(const std::string& input){
-    std::cout << "Part1\n";
+const std::string DayZero::part1(const std::string& input) const{
 
     std::stringstream ss(input);
     std::string to;
-
+    int total = 0;
     if (input != ""){
         while(std::getline(ss,to,'\n')){
-          std::cout << to <<std::endl;
+          total += std::stoi(to);
         }
     }
-    return "bleh";
+    return std::to_string(total);
 }
 
-const std::string day0::part2(const std::string& input){
-  return "blah";
+const std::string DayZero::part2(const std::string& input) const{
+    std::stringstream ss(input);
+    std::string to;
+    int total = 0;
+    if (input != ""){
+        while(std::getline(ss,to,'\n')){
+          total += std::stoi(to);
+        }
+    }
+    return std::to_string(total);
 }

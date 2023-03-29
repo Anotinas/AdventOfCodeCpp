@@ -1,6 +1,13 @@
-#include <string>
+#if !defined(DAY_ZERO)
+#define DAY_ZERO
 
-namespace day0{
-    const std::string part1(const std::string& input);
-    const std::string part2(const std::string& input);
+#include <string>
+#include "Day.h"
+
+class DayZero : public virtual Day {
+public:
+    const std::string part1(const std::string& input) const;
+    const std::string part2(const std::string& input) const;
 };
+
+#endif //DAYZERO

@@ -17,9 +17,7 @@ target_include_directories(
     PRIVATE
     include)
 
-message("day0_enabled=${DAY0_ENABLED}")
-# Adding libraries for the various days
-if(DAY0_ENABLED)
+# Sources and includes for Day0
 target_include_directories(
     ${PROJECT_NAME}
     PRIVATE
@@ -28,16 +26,3 @@ target_sources(
     ${PROJECT_NAME}
     PRIVATE
     days/day0/day0.cpp)
-endif()
-
-message("day3_enabled=${DAY3_ENABLED}")
-if(DAY3_ENABLED)
-    add_library(
-        day3lib
-        days/day3/day3.h
-        days/day3/day3.cpp)
-    target_link_libraries(
-        ${PROJECT_NAME}
-        PRIVATE
-        day3lib)
-endif()
