@@ -4,25 +4,24 @@
 #include <iostream>
 #include <vector>
 
-int main(int argc, char const *argv[])
-{
-    bool enable_tests = false;
-    //-1 signifies that there is no chosen value for 
-    int day = -1;
-    int part = -1;
+int main(int argc, char const *argv[]) {
+  //-1 signifies no specific day, so all days should be executed
+  int day = -1;
+  int part = -1;
+  bool enable_tests = true;
 
-    if (day == -1 && argc > 1)
-    {
-        day = std::atoi(argv[1]);
-        std::cout << "Day:" << day << "\n";
-    }
+  if (day == -1 && argc > 1)
+  {
+    day = std::atoi(argv[1]);
+    std::cout << "Day:" << day << "\n";
+  }
 
-    if (day != -1 && argc > 2)
-    {
-        part = std::atoi(argv[2]);
-        std::cout << "Part:" << part << "\n";
-    }
+  if (day != -1 && argc > 2)
+  {
+    part = std::atoi(argv[2]);
+    std::cout << "Part:" << part << "\n";
+  }
 
-    adventGeneral::runDay(day, part, enable_tests);
-    return 0;
+  adventGeneral::runDay(day, part, enable_tests);
+  return 0;
 }
